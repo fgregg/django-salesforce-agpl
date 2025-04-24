@@ -654,7 +654,7 @@ class SalesforceClientCredentialsAuth(StaticGlobalAuth):
         settings_dict = self.settings_dict
         url = ''.join([settings_dict['HOST'], '/services/oauth2/token'])
 
-        log.info("authentication to %s as %s", settings_dict['HOST'], settings_dict['USER'])
+        log.info("authentication to %s", settings_dict['HOST'])
         auth_params = {
             'grant_type':    'client_credentials',
             'client_id':     settings_dict['CONSUMER_KEY'],
